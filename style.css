@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* navigation bar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+/* Logo */
+.logo-container {
+  flex: 1;
+}
+.logo {
+  font-size: 30px;
+  color: #09a5a7;
+}
+/* Menu */
+.menu-container {
+  flex: 6;
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+/* Navigation bar list */
+.menu-list-item {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.menu-list-item.active {
+  font-weight: bold;
+}
+/* Profile */
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+
+  justify-content: flex-end;
+}
+.profile-text-container {
+  margin: 0 20px;
+}
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* toggle of the light and dark theme */
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.toggle-icon {
+  color: goldenrod;
+}
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+/* Side bar */
+.sidebar {
+  width: 50px;
+  height: 110%;
+  background-color: black;
+
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+/* Icons in the sidebar */
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+/* container. The main Body */
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+/* adjusting container to the left */
+.content-container {
+  margin-left: 50px;
+}
+.featureds {
+  position: relative;
+  top: -40px;
+}
+/* Background picture (The feautured content) */
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+}
+/* DJANGO */
+.featured-title {
+  width: 200px;
+  position: relative;
+  top: -50px;
+}
+/* description and its settings */
+.featured-desc {
+  width: 350px;
+  color: lightgray;
+}
+/* The watch now button */
+.featured-button {
+  background-color: #09a5a7;
+  color: white;
+  margin-top: -10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+/* Parent class 1 of the container of the movie list */
+.movie-list-container {
+  padding: 20px;
+  position: relative;
+  top: -25px;
+}
+/* Parent class 2 Wrapper */
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+/* Parent class 3 of the movie list */
+.movie-list {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  transform: translateX(0);
+  transition: 0.5s all ease-in-out;
+}
+/* tHIS IS WHERE YOU CAN EDIT SPACE BETWEEN IMAGES */
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+  opacity: 0.8;
+}
+/* The small to big hover effect */
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.1);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+/*  */
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+/* The size, settings and transition of the images */
+.movie-list-item-img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+/* The title of the movie that is inside the movie pictures */
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0 10px;
+  font-style: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+  border-radius: 10px;
+}
+/* The description inside the images */
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 5px;
+  font-style: 14px;
+  position: absolute;
+  top: 21%;
+  left: -10px;
+  font-size: 11.5px;
+  width: 150px;
+  left: 40px;
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+  border-radius: 10px;
+}
+.movie-list-item-desc2 {
+  position: absolute;
+}
+
+/* The button inside the images after hover */
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #09a5a7;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 38px;
+  left: 90px;
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+
+/* Arrow button for slide bar */
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 85px;
+  right: 0;
+  color: white;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+/* white mode settings */
+.container.active {
+  background-color: white;
+}
+.movie-list-title.active {
+  color: black;
+}
+
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+
+.sidebar.active {
+  background-color: white;
+}
+
+.left-menu-icon.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}

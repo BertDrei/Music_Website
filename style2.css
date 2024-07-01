@@ -1,0 +1,22 @@
+.aboutus {
+  position: absolute;
+  bottom: 280px;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.desc {
+  position: absolute;
+  bottom: 160px;
+  font-size: larger;
+  width: 1330px;
+}
+
+.about-us {
+  position: relative;
+  bottom: -840px;
+  left: 50px;
+}
+.span {
+  opacity: 0.4;
+}
